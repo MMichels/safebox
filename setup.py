@@ -33,7 +33,7 @@ extensions = [
 
 setup(
     name="safebox",
-    version=datetime.datetime.now().strftime("%Y%m%d_%H%M%S"),
+    version=datetime.datetime.now().strftime("%Y%m%d%H%M%S"),
     description="A safe waay to store your Python application credetials",
     long_description=long_description,
     long_description_content_type='text/markdown',
