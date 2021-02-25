@@ -12,6 +12,10 @@ for root, folder, files in os.walk("./safebox/src"):
             sources.append(os.path.join(root, file))
     includes.append(root)
 
+long_description = ""
+with open("README.MD") as f:
+    long_description = f.read()
+
 
 
 extensions = [
@@ -30,13 +34,12 @@ setup(
     name="safebox",
     version="1.0",
     description="A safe waay to store your Python application credetials",
-    long_description="""This application is build with cython and c/c++ code, this allow us to store a \"super secret key\" to encrypt and decrypt strings, this allow to store, with a minimum safety, crypted strings, this strings, can be, for ex. users, passwords, address to database connection.
-    IMPORTANT: This module comes with random keys, but is EXTREMALLY RECOMENDED than you compile this module by you own, from sources, to define YOUR UNIQUE secret key on the c/c++ modules.
-    IMPORTANT2: The PRIVATE_KEY must be 32bytes long (32 chars) and the PRIVATE_IV must be 16bytes long.    
-    """,
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author="Mateus Michels de Oliveira",
     author_email="michels09@hotmail.com",
     ext_modules=cythonize(extensions),
     requires=["setuptools", "wheel", "Cython"],
-    packages=find_packages()
+    packages=find_packages(),
+    url="https://github.com/MMichels/safebox"
 )
