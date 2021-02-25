@@ -1,3 +1,7 @@
+build/
+dist/
+safebox.egg-info/
+
 **.sln
 **.vcxproj*
 **.txt

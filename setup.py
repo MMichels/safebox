@@ -1,3 +1,4 @@
+import datetime
 import os
 from setuptools import setup, find_packages
 from distutils.extension import Extension
@@ -32,7 +33,7 @@ extensions = [
 
 setup(
     name="safebox",
-    version="1.0",
+    version=datetime.datetime.now().strftime("%Y%m%d_%H%M%S"),
     description="A safe waay to store your Python application credetials",
     long_description=long_description,
     long_description_content_type='text/markdown',
