@@ -42,5 +42,8 @@ setup(
     ext_modules=cythonize(extensions),
     requires=["setuptools", "wheel", "Cython"],
     packages=find_packages(),
+    package_data={
+        "": ["README.MD"]
+    }
     url="https://github.com/MMichels/safebox"
 )
