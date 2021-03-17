@@ -18,7 +18,24 @@ To define your keys follow the steps:
 Once your keys are alrealy defined, you can compile the lib.
 
 1. Install Setuptools, wheels and Cython library
-2. On main directory, run: python setup.py install
+2. If your use venv, activate your enviroment
+3. On main directory, run: python setup.py install
+4. Ready!
+
+## Usage Example
+
+```
+import safebox
+
+message = "test 123 !@#"
+crypted = safebox.crypt(message.encode())
+decrypted = safebox.decrypt(crypted.encode())
+
+print("Message: ", message)
+print("Crypted: ", crypted)
+print("Decrypted: ", decrypted)
+
+```
 
 **IMPORTANT2**: The PRIVATE_KEY must be 32bytes long (32 chars) and the PRIVATE_IV must be 16bytes (16 chars) long.
 
