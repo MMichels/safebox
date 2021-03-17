@@ -28,8 +28,8 @@ Once your keys are alrealy defined, you can compile the lib.
 import safebox
 
 message = "test 123 !@#"
-crypted = safebox.crypt(message.encode())
-decrypted = safebox.decrypt(crypted.encode())
+crypted = safebox.crypt(message.encode()).decode()
+decrypted = safebox.decrypt(crypted.encode()).decode()
 
 print("Message: ", message)
 print("Crypted: ", crypted)
