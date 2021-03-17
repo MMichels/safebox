@@ -6,7 +6,9 @@ This application is build with cython and c/c++ code, this allow us to store a \
 
 ## DEFINE YOUR KEYS!
 
-**IMPORTANT**: This module comes with random keys, but is EXTREMALLY RECOMENDED than you compile this module by you own, from sources (*available on github*), to define YOUR UNIQUE secret key on the c/c++ modules.
+**IMPORTANT**: This module comes with random keys, but is **EXTREMALLY RECOMENDED** than you compile this module by you own, from sources (*available on github*), to define YOUR UNIQUE secret key on the c/c++ modules.
+
+**IMPORTANT2**: The PRIVATE_KEY **MUST** be 32bytes long (32 chars) and the PRIVATE_IV **MUST** be 16bytes (16 chars) long and ASCII characters.
 
 To define your keys follow the steps:
 
@@ -36,8 +38,6 @@ print("Crypted: ", crypted)
 print("Decrypted: ", decrypted)
 
 ```
-
-**IMPORTANT2**: The PRIVATE_KEY must be 32bytes long (32 chars) and the PRIVATE_IV must be 16bytes (16 chars) long.
 
 ### REFERENCES
 
