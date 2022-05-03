@@ -16,6 +16,7 @@
 
 void init(void);
 void finish(void);
+void get_keys(void);
 
 char* crypt(char* message);
 char* decrypt(char* crypted);

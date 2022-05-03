@@ -14,7 +14,20 @@ CBC *cbc;
 
 void init(void){
     string key = TOSTRING(PRIVATE_KEY);
-    string iv = TOSTRING(PRIVATE_IV);
+    string iv = TOSTRING(PRIVATE_IV);    
+
+    cout << "Key: " << key << endl;
+    cout << "iv: " << iv << endl;
+
+    if (key.compare("f2b403ea764d11eb94390242ac130002") == 0 ||
+        iv.compare("76fc77c44a46c70a") == 0
+    )
+    {
+        cout << "!!!ATTENTION!!! YOU ARE USING THE DEFAULT PRIVATE AND IV KEYS, ";
+        cout << "WHATs IS NOT!!! A FULL SAFE POLICY, ";
+        cout << "LEARN MORE ON: https://github.com/MMichels/safebox" << endl;
+    }
+    
     aes = new AES(key);
     cbc = new CBC(aes, iv);
 }
@@ -25,6 +38,22 @@ void finish(void){
     delete(cbc);
 }
 
+void get_keys(void){    
+    string key = TOSTRING(PRIVATE_KEY);
+    string iv = TOSTRING(PRIVATE_IV);
+
+    cout << "Key: " << key << endl;
+    cout << "iv: " << iv << endl;
+
+    if (key.compare("f2b403ea764d11eb94390242ac130002") == 0 ||
+        iv.compare("76fc77c44a46c70a") == 0
+    )
+    {
+        cout << "!!!ATTENTION!!! YOU ARE USING THE DEFAULT PRIVATE AND IV KEYS, ";
+        cout << "WHATs IS NOT!!! A FULL SAFE POLICY, ";
+        cout << "LEARN MORE ON: https://github.com/MMichels/safebox" << endl;
+    }
+}
 
 char* crypt(char *message){
     init();
